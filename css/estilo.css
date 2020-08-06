@@ -1,0 +1,33 @@
+/*SELETOR*/
+
+body {
+    background: url('../img/fundo.jpg');
+}
+
+@font-face {
+    font-family: "fonte-nova";
+    src: url('../fonts/GangofThree.woff');
+}
+
+h1 {
+    color: rgb(155, 118, 15);
+    font-size: 30px;
+    font-family: "fonte-nova";
+    line-height: 0.8em;
+}
+
+
+/*ID*/
+
+#info {
+    margin: 0 auto;
+    min-width: 600px;
+    max-width: 600px;
+}
+
+
+/*CLASSES*/
+
+.campo {
+    text-align: center;
+}

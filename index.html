@@ -3,21 +3,23 @@
 
 <head>
     <title>Jogo da Cobrinha</title>
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 
 <body>
+    <div id="info">
+        <h1>PONTUAÇÃO: 0</h1>
+        <h1>RECORDE: 0</h1>
+    </div>
 
-    <center>
-        <h1>PONTUAÇÃO: </h1>
-        <h1>RECORDE: </h1>
 
+    <div class="campo">
         <canvas id="stage" width="600" height="600"></canvas>
         <script type="text/javascript">
-            
             var pontuacao = 0;
             var record = 0;
 
-            window.onload = function () {
+            window.onload = function() {
                 var stage = document.getElementById('stage');
                 var ctx = stage.getContext("2d");
                 document.addEventListener("keydown", keyPush);
@@ -91,7 +93,10 @@
                         }
                     }
 
-                    rastro.push({ x: pontoX, y: pontoY })
+                    rastro.push({
+                        x: pontoX,
+                        y: pontoY
+                    })
                     while (rastro.length > tamanhoCobra) {
                         rastro.shift();
                     }
@@ -139,11 +144,11 @@
                             break;
                     }
                 }
-
             }
         </script>
+    </div>
 
-    </center>
+
 </body>
 
 </html>
